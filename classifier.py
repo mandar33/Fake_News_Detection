@@ -35,7 +35,6 @@ nb_pipeline = Pipeline([
 
 nb_pipeline.fit(DataPrep.train_news['Statement'],DataPrep.train_news['Label'])
 
-#nb_pipeline.predict(doc_new)
 predicted_nb = nb_pipeline.predict(DataPrep.test_news['Statement'])
 np.mean(predicted_nb == DataPrep.test_news['Label'])
 #accuracy = 0.61
@@ -75,7 +74,6 @@ sgd_pipeline = Pipeline([
 
 sgd_pipeline.fit(DataPrep.train_news['Statement'],DataPrep.train_news['Label'])
 
-#svm2_pipeline.predict(doc_new)
 predicted_sgd = sgd_pipeline.predict(DataPrep.test_news['Statement'])
 np.mean(predicted_sgd == DataPrep.test_news['Label'])
 #accurary = 0.58
@@ -206,8 +204,6 @@ sgd_pipeline_ngram = Pipeline([
          ])
 
 sgd_pipeline_ngram.fit(DataPrep.train_news['Statement'],DataPrep.train_news['Label'])
-
-sgd_pipeline_ngram.predict(doc_new)
 
 predicted_sgd_ngram = sgd_pipeline_ngram.predict(DataPrep.train_news['Statement'])
 np.mean(predicted_sgd_ngram == DataPrep.train_news['Label'])
