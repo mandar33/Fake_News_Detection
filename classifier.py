@@ -22,8 +22,7 @@ from sklearn.model_selection import GridSeachCV
 from sklearn.model_selection import learning_curve
 import matplotlib.pyplot as plt
 
-#string to test
-doc_new = ['obama is running for president in 2016']
+
 
 #the feature selection has been done in FeatureSelection.py module. here we will create models using those features for prediction
 
