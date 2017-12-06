@@ -1,3 +1,5 @@
+
+
 # Fake News Detection
 
 Fake News Detection in Python
@@ -14,8 +16,21 @@ What things you need to install the software and how to install them:
 
 1. Python 3.6 
 
-* This setup requires that your machine has python 3.6 installed on it. you can refere to this https://www.python.org/downloads/ to download python. Once you have python installed, you will need to setup PATH variables. To do that check this: https://www.pythoncentral.io/add-python-to-path-python-is-not-recognized-as-an-internal-or-external-command/
-
+* This setup requires that your machine has python 3.6 installed on it. you can refere to this https://www.python.org/downloads/ to download python. Once you have python installed, you will need to setup PATH variables. To do that check this: 
+a)Open Explorer.
+b)Right-click 'Computer' in the Navigation Tree Panel on the left.
+c)Select 'Properties' at the bottom of the Context Menu.
+d)Select 'Advanced system settings'
+e)Click 'Environment Variables...' in the Advanced Tab
+f)Under 'System Variables':
+g) Add 
+PY_HOME
+C:\Python36
+PYTHONPATH
+%PY_HOME%\Lib;%PY_HOME%\DLLs;%PY_HOME%\Lib\lib-tk;C:\another-library
+h)Append
+path
+%PY_HOME%;%PY_HOME%\Scripts\
 * Optionally you can use anaconda in one step and use its anaconda prompt to run the commands. To install anaconda check this:
 https://www.anaconda.com/download/
 
