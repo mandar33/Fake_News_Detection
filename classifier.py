@@ -81,7 +81,7 @@ np.mean(predicted_sgd == DataPrep.test_news['Label'])
 #random forest
 random_forest = Pipeline([
         ('rfCV',FeatureSelection.countV),
-        ('rf_clf',RandomForestClassifier(n_estimators=200,n_jobs=3))
+        ('rf_clf',RandomForestClassifier(n_estimators=300,n_jobs=3))
         ])
     
 random_forest.fit(DataPrep.train_news['Statement'],DataPrep.train_news['Label'])
