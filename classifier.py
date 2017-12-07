@@ -66,10 +66,10 @@ np.mean(predicted_svm == DataPrep.test_news['Label'])
 #accuracy = 0.56
 
 
-#using SVM Stochastic Gradient Descent on modified_huber loss
+#using SVM Stochastic Gradient Descent on squared_hinge loss
 sgd_pipeline = Pipeline([
         ('svm2CV',FeatureSelection.countV),
-        ('svm2_clf',SGDClassifier(loss='modified_huber', penalty='l2', alpha=1e-3, n_iter=5))
+        ('svm2_clf',SGDClassifier(loss='squared_hinge', penalty='l2', alpha=1e-3, n_iter=5))
         ])
 
 sgd_pipeline.fit(DataPrep.train_news['Statement'],DataPrep.train_news['Label'])
