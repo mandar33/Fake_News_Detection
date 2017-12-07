@@ -278,7 +278,7 @@ parameters = {'rf_tfidf__ngram_range': [(1, 1), (1, 2),(1,3),(1,4),(1,5)],
 }
 
 gs_clf = GridSearchCV(random_forest_ngram, parameters, n_jobs=-1)
-gs_clf = gs_clf.fit(DataPrep.train_news['Statement'][:5000],DataPrep.train_news['Label'][:5000])
+gs_clf = gs_clf.fit(DataPrep.train_news['Statement'][:6000],DataPrep.train_news['Label'][:5000])
 
 gs_clf.best_score_
 gs_clf.best_params_
