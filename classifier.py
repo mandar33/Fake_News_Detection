@@ -303,7 +303,7 @@ gs_clf.cv_results_
 #running both random forest and logistic regression models again with best parameter found with GridSearch method
 random_forest_final = Pipeline([
         ('rf_tfidf',TfidfVectorizer(stop_words='english',ngram_range=(1,3),use_idf=True,smooth_idf=True)),
-        ('rf_clf',RandomForestClassifier(n_estimators=300,n_jobs=3,max_depth=10))
+        ('rf_clf',RandomForestClassifier(n_estimators=400,n_jobs=3,max_depth=10))
         ])
     
 random_forest_final.fit(DataPrep.train_news['Statement'],DataPrep.train_news['Label'])
