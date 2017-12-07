@@ -213,7 +213,7 @@ np.mean(predicted_sgd_ngram == DataPrep.train_news['Label'])
 random_forest_ngram = Pipeline([
         #('rfCV',FeatureSelection.countV),
         ('rf_tfidf',FeatureSelection.tfidf_ngram),
-        ('rf_clf',RandomForestClassifier(n_estimators=300,n_jobs=3))
+        ('rf_clf',RandomForestClassifier(n_estimators=100,n_jobs=3))
         ])
     
 random_forest_ngram.fit(DataPrep.train_news['Statement'],DataPrep.train_news['Label'])
